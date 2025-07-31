@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Data Mining Exam Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            border: 1px solid #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fdfdfd;
+        }
+        
+        .question-title {
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        
+        .scenario {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .part {
+            margin-bottom: 20px;
+        }
+        
+        .part-label {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 8px;
+        }
+        
+        .answer {
+            background: #e8f6f3;
+            padding: 15px;
+            border-left: 4px solid #27ae60;
+            margin-top: 10px;
+        }
+        
+        .answer-title {
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 8px;
+        }
+        
+        .calculation {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .chart-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .chart {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background: white;
+            margin: 10px auto;
+            max-width: 600px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .data-table th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .key-insight {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .formula {
+            background: #e7f3ff;
+            border: 1px solid #bee5eb;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        .algorithm {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .algorithm-step {
+            margin-bottom: 10px;
+            padding: 8px;
+            background: white;
+            border-radius: 3px;
+        }
+        
+        @media print {
+            body { font-size: 12px; }
+            .section { page-break-before: always; }
+            .question { page-break-inside: avoid; }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Complete Data Mining Exam Solutions</h1>
+        <p><strong>Teaching Philosophy:</strong> "Interpret results, don't just compute numbers" and "Select methods based on data and question, not by rote"</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">SECTION A: CONCEPTUAL UNDERSTANDING & CRITICAL THINKING</div>
+        
+        <div class="question">
+            <div class="question-title">Question 1: When Statistical Measures Fail (15 marks)</div>
+            <div class="scenario">
+                <strong>Scenario:</strong> A startup CEO presents these statistics about their app's daily user engagement time:
+                <ul>
+                    <li>Mean: 45 minutes</li>
+                    <li>Median: 8 minutes</li>
+                    <li>Mode: 5 minutes</li>
+                    <li>Standard deviation: 67 minutes</li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-label">a) What does this data pattern tell you about user behavior? (5 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <p>The data reveals a <span class="highlight">highly right-skewed distribution</span> with the following characteristics:</p>
+                    <ul>
+                        <li><strong>Extreme right skew:</strong> Mean (45 min) >> Median (8 min) indicates a few extreme outliers pulling the average up</li>
+                        <li><strong>Most users are light users:</strong> Mode = 5 minutes shows the most common usage pattern</li>
+                        <li><strong>Power user phenomenon:</strong> A small number of users spend excessive time on the app</li>
+                        <li><strong>High variability:</strong> Standard deviation (67 min) > Mean (45 min) indicates extremely inconsistent engagement patterns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <canvas id="skewedChart" width="400" height="200"></canvas>
+                    <p><strong>Figure 1:</strong> Visualization of Right-Skewed User Engagement Distribution</p>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">b) Which measure would you report to investors and why? (5 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <p>Report <span class="highlight">Median (8 minutes)</span> to investors because:</p>
+                    <ul>
+                        <li><strong>Honest representation:</strong> Shows that 50% of users spend ≤ 8 minutes</li>
+                        <li><strong>Not misleading:</strong> Mean is inflated by extreme outliers (power users or potentially bots)</li>
+                        <li><strong>Actionable insights:</strong> More realistic for product development and user experience decisions</li>
+                        <li><strong>Investor trust:</strong> Demonstrates transparency and realistic expectations</li>
+                    </ul>
+                    
+                    <div class="key-insight">
+                        <strong>Key Business Insight:</strong> The typical user experience is 8 minutes, not 45 minutes. Product strategy should focus on engaging the majority of light users rather than relying on power users.
+                    </div>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">c) What additional investigation would you recommend? (5 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <ol>
+                        <li><strong>Power user analysis:</strong> Identify users with >60 minute sessions - are they genuine users or bots?</li>
+                        <li><strong>User segmentation:</strong> Analyze engagement by demographics, acquisition channel, device type</li>
+                        <li><strong>Temporal patterns:</strong> Time-of-day and day-of-week usage patterns</li>
+                        <li><strong>Feature correlation:</strong> Which app features correlate with high engagement?</li>
+                        <li><strong>Retention analysis:</strong> Do power users have better retention rates?</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">Question 2: The T-shirt Ordering Dilemma (12 marks)</div>
+            <div class="scenario">
+                <strong>Scenario:</strong> You're ordering T-shirts for a company event. Here's the size distribution:
+                <br>XS: 2 people, S: 15 people, M: 25 people, L: 18 people, XL: 8 people, XXL: 2 people
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <canvas id="tshirtChart" width="400" height="200"></canvas>
+                    <p><strong>Figure 2:</strong> T-shirt Size Distribution</p>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">a) If you can order only 3 different sizes, which statistical approach would you use and which sizes would you choose? (6 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <p><strong>Approach:</strong> Use <span class="highlight">frequency analysis (mode-based approach)</span></p>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Size</th>
+                            <th>Frequency</th>
+                            <th>Percentage</th>
+                        </tr>
+                        <tr>
+                            <td>Medium (M)</td>
+                            <td>25</td>
+                            <td>35.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Large (L)</td>
+                            <td>18</td>
+                            <td>25.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Small (S)</td>
+                            <td>15</td>
+                            <td>21.4%</td>
+                        </tr>
+                    </table>
+                    
+                    <p><strong>Selected sizes:</strong> Medium, Large, Small</p>
+                    <p><strong>Coverage:</strong> 58 out of 70 people (82.9%) get their exact size</p>
+                    <p><strong>Rationale:</strong> Minimizes the number of people with incorrect sizes while covering the highest frequency distribution.</p>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">b) The supplier offers a discount if you order just 1 size for everyone. Analyze this decision using appropriate statistical measures. (6 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <p><strong>Statistical Analysis:</strong></p>
+                    <ul>
+                        <li><strong>Mode = Medium</strong> (most frequent size)</li>
+                        <li><strong>Perfect fit:</strong> 25/70 = 35.7% of people</li>
+                        <li><strong>Reasonable fit:</strong> Including adjacent sizes (S, L) = 58/70 = 82.9%</li>
+                        <li><strong>Poor fit:</strong> 12/70 = 17.1% would be very uncomfortable (XS, XL, XXL)</li>
+                    </ul>
+                    
+                    <div class="warning">
+                        <strong>Business Decision:</strong> Only acceptable if cost savings > 17% of people being uncomfortable. 
+                        <br><strong>Recommendation:</strong> Not advisable - customer satisfaction should outweigh cost savings.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">Question 3: Visualization Trap (10 marks)</div>
+            <div class="scenario">
+                A marketing team creates a pie chart showing customer age distribution:
+                <br>18-25: 45%, 26-35: 30%, 36-45: 15%, 46-55: 7%, 56+: 3%
+                <br>Then they create a histogram of the same data and get completely different insights.
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <canvas id="pieChart" width="300" height="200"></canvas>
+                    <p><strong>Figure 3a:</strong> Age Distribution - Pie Chart</p>
+                </div>
+                <div class="chart">
+                    <canvas id="histogramChart" width="400" height="200"></canvas>
+                    <p><strong>Figure 3b:</strong> Age Distribution - Histogram</p>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">a) Why might the histogram reveal different insights than the pie chart? (5 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <ul>
+                        <li><strong>Shows continuity:</strong> Histogram reveals age as continuous variable, not discrete categories</li>
+                        <li><strong>Distribution shape:</strong> Can identify if data is normal, skewed, or bimodal</li>
+                        <li><strong>Trend visualization:</strong> Shows aging customer base pattern clearly</li>
+                        <li><strong>Gap identification:</strong> Reveals age gaps or clusters within ranges</li>
+                        <li><strong>Natural ordering:</strong> Maintains age progression that pie chart loses</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">b) Which visualization would you trust more for business decisions and why? (5 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <p>Trust <span class="highlight">histogram more</span> because:</p>
+                    <ul>
+                        <li><strong>Appropriate for data type:</strong> Age is continuous, not categorical</li>
+                        <li><strong>Shows natural progression:</strong> Reveals trends and patterns in customer lifecycle</li>
+                        <li><strong>Business insights:</strong> Can identify customer acquisition challenges, aging demographics</li>
+                        <li><strong>Predictive value:</strong> Better for forecasting future customer trends</li>
+                        <li><strong>Strategic planning:</strong> Informs marketing segmentation and targeting strategies</li>
+                    </ul>
+                    
+                    <div class="key-insight">
+                        <strong>Business Implication:</strong> The histogram shows a young customer base that's aging, suggesting need for strategies to attract younger customers.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">SECTION B: PRACTICAL APPLICATION & DECISION MAKING</div>
+        
+        <div class="question">
+            <div class="question-title">Question 4: The Misleading Average Problem (18 marks)</div>
+            <div class="scenario">
+                <strong>Scenario:</strong> A restaurant chain wants to analyze customer spending across 3 locations:
+                <br><strong>Location A:</strong> [12, 15, 18, 20, 22, 25, 28, 30, 35, 40] (10 customers)
+                <br><strong>Location B:</strong> [50, 55, 60, 65, 70] (5 customers)
+                <br><strong>Location C:</strong> [5, 8, 10, 12, 15, 18, 20, 25, 30, 200] (10 customers)
+            </div>
+
+            <div class="part">
+                <div class="part-label">a) Calculate mean and median for each location. (6 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    
+                    <div class="calculation">
+                        <strong>Location A Calculations:</strong><br>
+                        Mean = (12+15+18+20+22+25+28+30+35+40) ÷ 10 = 245 ÷ 10 = 24.5<br>
+                        Median = (22+25) ÷ 2 = 23.5 (middle values of sorted data)
+                    </div>
+                    
+                    <div class="calculation">
+                        <strong>Location B Calculations:</strong><br>
+                        Mean = (50+55+60+65+70) ÷ 5 = 300 ÷ 5 = 60<br>
+                        Median = 60 (middle value of 5 data points)
+                    </div>
+                    
+                    <div class="calculation">
+                        <strong>Location C Calculations:</strong><br>
+                        Mean = (5+8+10+12+15+18+20+25+30+200) ÷ 10 = 343 ÷ 10 = 34.3<br>
+                        Median = (15+18) ÷ 2 = 16.5 (middle values of sorted data)
+                    </div>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Location</th>
+                            <th>Mean ($)</th>
+                            <th>Median ($)</th>
+                            <th>Distribution</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>24.5</td>
+                            <td>23.5</td>
+                            <td>Slightly right-skewed</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>60.0</td>
+                            <td>60.0</td>
+                            <td>Symmetric</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>34.3</td>
+                            <td>16.5</td>
+                            <td>Highly right-skewed</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <canvas id="restaurantChart" width="500" height="300"></canvas>
+                    <p><strong>Figure 4:</strong> Restaurant Location Spending Comparison</p>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">b) The corporate office wants to rank locations by "customer value." Analyze which statistical measure leads to which ranking and explain the business implications. (8 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Ranking Method</th>
+                            <th>1st Place</th>
+                            <th>2nd Place</th>
+                            <th>3rd Place</th>
+                        </tr>
+                        <tr>
+                            <td><strong>By Mean</strong></td>
+                            <td>B ($60.00)</td>
+                            <td>C ($34.30)</td>
+                            <td>A ($24.50)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>By Median</strong></td>
+                            <td>B ($60.00)</td>
+                            <td>A ($23.50)</td>
+                            <td>C ($16.50)</td>
+                        </tr>
+                    </table>
+                    
+                    <p><strong>Business Implications:</strong></p>
+                    <ul>
+                        <li><strong>Mean ranking misleading:</strong> Location C appears better than A due to one $200 customer</li>
+                        <li><strong>Median ranking more accurate:</strong> Shows Location A has consistently higher typical spending than C</li>
+                        <li><strong>Location B clearly premium:</strong> Both measures agree on its superior performance</li>
+                        <li><strong>Resource allocation impact:</strong> Using mean would incorrectly prioritize Location C over A</li>
+                    </ul>
+                    
+                    <div class="warning">
+                        <strong>Critical Business Decision:</strong> Using mean would lead to wrong investment decisions. Location A should receive more resources than C based on consistent customer value.
+                    </div>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">c) Design a comprehensive analysis approach that gives the most accurate business insight. (4 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <ol>
+                        <li><strong>Primary measure:</strong> Use median as main ranking metric (robust to outliers)</li>
+                        <li><strong>Variability analysis:</strong> Calculate standard deviation to understand consistency</li>
+                        <li><strong>Outlier investigation:</strong> Analyze high-value customers separately (are they repeatable?)</li>
+                        <li><strong>Volume consideration:</strong> Factor in customer count alongside per-customer metrics</li>
+                        <li><strong>Segmentation:</strong> Analyze spending tiers (low/medium/high value customers)</li>
+                    </ol>
+                    
+                    <div class="key-insight">
+                        <strong>Recommended Ranking:</strong> B (premium consistent), A (good consistent), C (unreliable with outlier dependency)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">Question 5: Real Estate Analysis Challenge (20 marks)</div>
+            <div class="scenario">
+                <strong>Scenario:</strong> You're analyzing house prices in a neighborhood:
+                <br>$180K, $190K, $200K, $210K, $220K, $230K, $240K, $250K, $260K, $1.2M
+            </div>
+
+            <div class="part">
+                <div class="part-label">a) Calculate all statistical measures and create a comprehensive analysis report. (10 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    
+                    <div class="calculation">
+                        <strong>Statistical Calculations:</strong><br>
+                        Data: [180, 190, 200, 210, 220, 230, 240, 250, 260, 1200] (in thousands)<br><br>
+                        Mean = (180+190+200+210+220+230+240+250+260+1200) ÷ 10 = 3180 ÷ 10 = $318K<br>
+                        Median = (220+230) ÷ 2 = $225K<br>
+                        Mode = None (all values unique)<br>
+                        Range = $1200K - $180K = $1020K<br>
+                        Standard Deviation ≈ $321K
+                    </div>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Measure</th>
+                            <th>Value</th>
+                            <th>Interpretation</th>
+                        </tr>
+                        <tr>
+                            <td>Mean</td>
+                            <td>$318K</td>
+                            <td>Heavily skewed by luxury outlier</td>
+                        </tr>
+                        <tr>
+                            <td>Median</td>
+                            <td>$225K</td>
+                            <td>True middle value, more representative</td>
+                        </tr>
+                        <tr>
+                            <td>Mode</td>
+                            <td>None</td>
+                            <td>All prices unique</td>
+                        </tr>
+                        <tr>
+                            <td>Standard Deviation</td>
+                            <td>$321K</td>
+                            <td>Extremely high variability</td>
+                        </tr>
+                        <tr>
+                            <td>Range</td>
+                            <td>$1,020K</td>
+                            <td>Massive price spread</td>
+                        </tr>
+                    </table>
+                    
+                    <p><strong>Analysis Report:</strong></p>
+                    <p>The neighborhood shows a mixed housing market with one luxury outlier ($1.2M) significantly distorting the mean. The median ($225K) provides a more honest representation of typical home values. The extremely high standard deviation ($321K) exceeding the mean indicates exceptional variability, primarily due to the outlier property.</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <canvas id="realEstateChart" width="500" height="300"></canvas>
+                    <p><strong>Figure 5:</strong> House Price Distribution with Outlier Effect</p>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">b) A real estate agent wants to advertise "average home price" in this neighborhood. What would you advise and why? (5 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <p><strong>Advice:</strong> Use <span class="highlight">median ($225K)</span> instead of mean ($318K)</p>
+                    
+                    <p><strong>Reasons:</strong></p>
+                    <ul>
+                        <li><strong>Honest representation:</strong> Better reflects what buyers can expect to pay</li>
+                        <li><strong>Builds trust:</strong> Won't mislead potential buyers with inflated expectations</li>
+                        <li><strong>Market reality:</strong> 90% of homes are in the $180K-$260K range</li>
+                        <li><strong>Ethical advertising:</strong> Avoids accusations of deceptive marketing</li>
+                        <li><strong>Competitive advantage:</strong> Accurate pricing attracts serious buyers</li>
+                    </ul>
+                    
+                    <div class="key-insight">
+                        <strong>Marketing Message:</strong> "Typical homes in this neighborhood are priced around $225K, with most properties ranging from $180K to $260K."
+                    </div>
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="part-label">c) A buyer asks about "typical" home prices. How would you respond? (5 marks)</div>
+                <div class="answer">
+                    <div class="answer-title">Expected Answer:</div>
+                    <p><strong>Professional Response:</strong></p>
+                    <blockquote>
+                        "Typical homes in this neighborhood cost around <strong>$225,000</strong>, with most houses ranging from <strong>$180,000 to $260,000</strong>. This represents 90% of the available properties. There is also one luxury home currently listed at $1.2 million, but that's not representative of the general market here. Most buyers in your situation find homes in the $200K-$250K range that offer excellent value for this location."
+                    </blockquote>
+                    
+                    <p><strong>Key Elements:</strong></p>
+                    <ul>
+                        <li><strong>Clear typical price:</strong> $225K median</li>
+                        <li><strong>Range context:</strong> $180K-$260K for most homes</li>
+                        <li><strong>Outlier explanation:</strong> Acknowledge but contextualize luxury home</li>
+                        <li><strong>Buyer-focused:</strong> Relevant range for their consideration</li>
+                        <li><strong>Transparent:</strong> Full picture without misleading statistics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chart configurations
+        const chartOptions = {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: ''
+                }
+            }
+        };
+
+        // Question 1 - Skewed Distribution Chart
+        const ctx1 = document.getElementById('skewedChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['0-10 min', '11-20 min', '21-30 min', '31-40 min', '41-50 min', '51+ min'],
+                datasets: [{
+                    label: 'Number of Users',
+                    data: [40, 25, 15, 8, 5, 7],
+                    backgroundColor: ['#3498db', '#2980b9', '#1f77b4', '#17a2b8', '#138496', '#dc3545'],
+                    borderColor: '#2c3e50',
+                    borderWidth: 1
+                }]
+            },
+options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'User Engagement Distribution (Right-Skewed)'
+                    }
+                }
+            }
+        });
+
+        // Question 2 - T-shirt Distribution Chart
+        const ctx2 = document.getElementById('tshirtChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+                datasets: [{
+                    label: 'Number of People',
+                    data: [2, 15, 25, 18, 8, 2],
+                    backgroundColor: ['#e74c3c', '#f39c12', '#27ae60', '#3498db', '#9b59b6', '#34495e'],
+                    borderColor: '#2c3e50',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'T-shirt Size Distribution'
+                    }
+                }
+            }
+        });
+
+        // Question 3 - Pie Chart
+        const ctx3 = document.getElementById('pieChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['18-25', '26-35', '36-45', '46-55', '56+'],
+                datasets: [{
+                    data: [45, 30, 15, 7, 3],
+                    backgroundColor: ['#3498db', '#2980b9', '#1f77b4', '#17a2b8', '#138496'],
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Age Distribution - Pie Chart View'
+                    }
+                }
+            }
+        });
+
+        // Question 3 - Histogram
+        const ctx4 = document.getElementById('histogramChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                labels: ['18-25', '26-35', '36-45', '46-55', '56+'],
+                datasets: [{
+                    label: 'Percentage of Customers',
+                    data: [45, 30, 15, 7, 3],
+                    backgroundColor: ['#3498db', '#2980b9', '#1f77b4', '#17a2b8', '#138496'],
+                    borderColor: '#2c3e50',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Age Distribution - Histogram View'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Percentage (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Age Groups'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Question 4 - Restaurant Comparison Chart
+        const ctx5 = document.getElementById('restaurantChart').getContext('2d');
+        new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: ['Location A', 'Location B', 'Location C'],
+                datasets: [{
+                    label: 'Mean ($)',
+                    data: [24.5, 60.0, 34.3],
+                    backgroundColor: '#e74c3c',
+                    borderColor: '#c0392b',
+                    borderWidth: 1
+                }, {
+                    label: 'Median ($)',
+                    data: [23.5, 60.0, 16.5],
+                    backgroundColor: '#27ae60',
+                    borderColor: '#229954',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Restaurant Location Spending: Mean vs Median'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Average Spending ($)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Question 5 - Real Estate Chart
+        const ctx6 = document.getElementById('realEstateChart').getContext('2d');
+        new Chart(ctx6, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Regular Homes',
+                    data: [
+                        {x: 1, y: 180}, {x: 2, y: 190}, {x: 3, y: 200}, {x: 4, y: 210}, 
+                        {x: 5, y: 220}, {x: 6, y: 230}, {x: 7, y: 240}, {x: 8, y: 250}, {x: 9, y: 260}
+                    ],
+                    backgroundColor: '#3498db',
+                    borderColor: '#2980b9',
+                    pointRadius: 8
+                }, {
+                    label: 'Luxury Outlier',
+                    data: [{x: 10, y: 1200}],
+                    backgroundColor: '#e74c3c',
+                    borderColor: '#c0392b',
+                    pointRadius: 12
+                }, {
+                    label: 'Mean ($318K)',
+                    data: [{x: 0, y: 318}, {x: 11, y: 318}],
+                    type: 'line',
+                    backgroundColor: '#f39c12',
+                    borderColor: '#f39c12',
+                    borderDash: [5, 5],
+                    pointRadius: 0
+                }, {
+                    label: 'Median ($225K)',
+                    data: [{x: 0, y: 225}, {x: 11, y: 225}],
+                    type: 'line',
+                    backgroundColor: '#27ae60',
+                    borderColor: '#27ae60',
+                    borderDash: [10, 5],
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'House Prices: Impact of Outlier on Mean vs Median'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Price ($000s)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'House Number'
+                        },
+                        min: 0,
+                        max: 11
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
